@@ -1,7 +1,7 @@
 package lapoo;
 
 public class Dog extends Animal {
-	void move() {
+	public void move() {
 		System.out.println("I walk");
 	}
 }

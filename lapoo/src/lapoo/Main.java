@@ -26,9 +26,6 @@ public class Main {
 		Dog ralph = new Dog();
 		ralph.move();
 
-		Pigeon pigeon = new Pigeon();
-		pigeon.move();
-
 		String[] myArray = new String[10];
 		myArray[3] = "hey";
 		for (int i = 0; i < myArray.length; i++) {
@@ -88,6 +85,40 @@ public class Main {
 			System.out.println(entry.getKey() + " -> " + entry.getValue());
 		}
 		System.out.println(map.size());
+
+		int perimeter = DisplayPerimeter.calculatePerimeter(2, 4);
+		System.out.println(perimeter);
+
+		String nom1 = "José";
+		String nom2 = nom1;
+		nom1 = "Jesus";
+		DisplayName.displayName(nom1);
+		DisplayName.displayName(nom2);
+
+		People guy = new People("Guy");
+		People marcus = guy;
+		guy.name = "Pas Guy";
+		DisplayName.displayName(guy.name);
+		DisplayName.displayName(marcus.name);
+
+		Countdown.countdown(60);
+
+		Animal bird = new Animal() {
+			@Override
+			public
+			void move() {
+				System.out.println("I fly!");
+			}
+		};
+
+		bird.move();
+		Locomotion pigeon = () -> {System.out.println("I plane");};
+		pigeon.move();
+		
+		GivingName name1 = (theName) -> {
+			System.out.println("My name is " +theName+ ".");
+		};
+		name1.givingName("John");
 	}
 
 }
